@@ -1,3 +1,4 @@
+import { GameContextProvider } from "@/context/GameContext";
 import { roboto } from "./fonts";
 import "./globals.css";
 
@@ -16,7 +17,7 @@ export default function RootLayout({
       <body
         className={`${roboto.className} h-screen w-screen bg-slate-50 text-ttt_dark_blue_500`}
       >
-        {children}
+        <GameContextProvider>{children}</GameContextProvider>
       </body>
     </html>
   );
